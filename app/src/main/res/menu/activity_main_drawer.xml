@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menuitem_nav_frontpagestories"
+            android:icon="@drawable/ic_arrow_upward"
+            android:title="@string/nav_frontpagestories" />
+
+        <item
+            android:id="@+id/menuitem_nav_newstories"
+            android:icon="@drawable/ic_new_releases"
+            android:title="@string/nav_newstories" />
+
+        <item
+            android:id="@+id/menuitem_nav_askstories"
+            android:icon="@drawable/ic_forum"
+            android:title="@string/nav_askstories" />
+
+        <item
+            android:id="@+id/menuitem_nav_showstories"
+            android:icon="@drawable/ic_people"
+            android:title="@string/nav_showstories" />
+
+        <item
+            android:id="@+id/menuitem_nav_jobstories"
+            android:icon="@drawable/ic_work"
+            android:title="@string/nav_jobstories" />
+
+    </group>
+
+</menu>
