@@ -3,4 +3,6 @@
     <color name="colorPrimary">#F57C00</color>
     <color name="colorPrimaryDark">#EF6C00</color>
     <color name="colorAccent">#000000</color>
+    <color name="colorTextPrimary">#000000</color>
+    <color name="colorImgFallback">#EEEEEE</color>
 </resources>

@@ -8,12 +8,11 @@
     <fragment
         android:id="@+id/fragment_nav_storylist"
         android:name="io.github.ajeetdsouza.hawk.StoryListFragment"
-        android:label="{title}"
-        tools:layout="@layout/fragment_storylist">
+        tools:layout="@layout/fragment_storyitem_list">
 
         <argument
-            android:name="title"
-            app:argType="string"
+            android:name="hnServiceType"
+            app:argType="io.github.ajeetdsouza.hawk.api.HnServiceType"
             app:nullable="false" />
 
     </fragment>
