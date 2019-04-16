@@ -6,9 +6,10 @@
     app:startDestination="@id/fragment_nav_storylist">
 
     <fragment
+        android:label="@string/nav_stories"
         android:id="@+id/fragment_nav_storylist"
         android:name="io.github.ajeetdsouza.hawk.StoryListFragment"
-        tools:layout="@layout/fragment_storyitem_list">
+        tools:layout="@layout/fragment_storylist">
 
         <argument
             android:name="hnServiceType"
@@ -16,5 +17,10 @@
             app:nullable="false" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/fragment_nav_settings"
+        android:name="io.github.ajeetdsouza.hawk.SettingsFragment"
+        android:label="@string/nav_settings" />
 
 </navigation>

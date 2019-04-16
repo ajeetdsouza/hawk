@@ -1,0 +1,12 @@
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.preference.SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:icon="@drawable/ic_link"
+        android:summaryOn="Links will open in custom tabs"
+        android:summaryOff="Links will open in the browser"
+        app:key="customtabs"
+        app:title="Open links in custom tabs"/>
+
+</androidx.preference.PreferenceScreen>

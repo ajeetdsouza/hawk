@@ -12,10 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
-import io.github.ajeetdsouza.hawk.api.HnService
-import io.github.ajeetdsouza.hawk.api.HnServiceType
-import io.github.ajeetdsouza.hawk.api.HnStoryList
-import io.github.ajeetdsouza.hawk.api.UriJsonAdapter
+import io.github.ajeetdsouza.hawk.api.*
 import kotlinx.android.synthetic.main.fragment_storyitem.view.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,7 +28,7 @@ class StoryListAdapter(hnServiceType: HnServiceType, private val onClickListener
         private const val TAG = "StoryListAdapter"
     }
 
-    private lateinit var storyList: HnStoryList
+    private val storyList = mutableListOf<HnStoryItem>()
 
     init {
         val moshi = Moshi.Builder()
@@ -100,7 +97,8 @@ class StoryListAdapter(hnServiceType: HnServiceType, private val onClickListener
     override fun onResponse(call: Call<HnStoryList>, response: Response<HnStoryList>) {
         val body = response.body()
         if (body != null) {
-            storyList = body
+            storyList.addAll(body)
+            notifyDataSetChanged()
         } else {
             Log.e(TAG, "Hex API call succeeded, but returned a null body")
         }

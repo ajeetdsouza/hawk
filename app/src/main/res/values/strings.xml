@@ -4,10 +4,12 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="nav_frontpagestories">Front Page</string>
+    <string name="nav_stories">Stories</string>
+    <string name="nav_topstories">Front Page</string>
     <string name="nav_newstories">New</string>
     <string name="nav_askstories">Ask</string>
     <string name="nav_showstories">Show</string>
     <string name="nav_jobstories">Jobs</string>
+    <string name="nav_settings">Settings</string>
 
 </resources>

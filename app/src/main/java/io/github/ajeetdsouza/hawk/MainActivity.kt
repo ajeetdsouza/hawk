@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(),
         toggle.syncState()
 
         navController = Navigation.findNavController(this, R.id.navhostfragment_main)
-        navController.setGraph(R.navigation.nav_graph, StoryListFragmentArgs(HnServiceType.TOP).toBundle())
+        navController.setGraph(R.navigation.navigation, StoryListFragmentArgs(HnServiceType.TOP).toBundle())
 
         NavigationUI.setupActionBarWithNavController(this, navController, drawerlayout_main)
         NavigationUI.setupWithNavController(navigationview_main, navController)
@@ -81,6 +81,8 @@ class MainActivity : AppCompatActivity(),
                     R.id.fragment_nav_storylist,
                     StoryListFragmentArgs(HnServiceType.JOBS).toBundle()
                 )
+            R.id.menuitem_nav_settings ->
+                navController.navigate(R.id.fragment_nav_settings)
         }
 
         drawerlayout_main.closeDrawer(GravityCompat.START)
@@ -95,7 +97,7 @@ class MainActivity : AppCompatActivity(),
                     when (storyItemFragmentArgs.hnServiceType) {
                         HnServiceType.TOP -> {
                             navigationview_main.setCheckedItem(R.id.menuitem_nav_frontpagestories)
-                            toolbar_main.subtitle = getString(R.string.nav_frontpagestories)
+                            toolbar_main.subtitle = getString(R.string.nav_topstories)
                         }
                         HnServiceType.NEW -> {
                             navigationview_main.setCheckedItem(R.id.menuitem_nav_newstories)
@@ -116,6 +118,7 @@ class MainActivity : AppCompatActivity(),
                     }
                 }
             }
+            else -> toolbar_main.subtitle = null
         }
     }
 }

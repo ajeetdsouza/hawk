@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menuitem_nav_frontpagestories"
             android:icon="@drawable/ic_whatshot"
-            android:title="@string/nav_frontpagestories" />
+            android:title="@string/nav_topstories" />
 
         <item
             android:id="@+id/menuitem_nav_newstories"
@@ -28,6 +26,11 @@
             android:id="@+id/menuitem_nav_jobstories"
             android:icon="@drawable/ic_work"
             android:title="@string/nav_jobstories" />
+
+        <item
+            android:id="@+id/menuitem_nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/nav_settings" />
 
     </group>
 
